@@ -2,22 +2,81 @@ index.html
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Employee Car Lease Tax Calculator</title>
+    <title>Sundaram Finance - Employee Car Lease Calculator</title>
     <style>
-        body { font-family: Arial; padding: 40px; background: #f4f6f8; }
-        .box { background: white; padding: 20px; border-radius: 10px; width: 400px; margin: auto; }
-        input, select, button { width: 100%; padding: 10px; margin: 10px 0; }
-        button { background: #0b5ed7; color: white; border: none; }
-        h2 { text-align: center; }
+        body { 
+            font-family: Arial; 
+            background: #f4f6f8; 
+            padding: 40px;
+        }
+
+        .container {
+            width: 450px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .logo img {
+            width: 180px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #0033A0;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+        }
+
+        button {
+            background: #0033A0;
+            color: white;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #001f66;
+        }
+
+        .cta {
+            background: #FFCC00;
+            color: black;
+            text-align: center;
+            padding: 10px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .footer {
+            font-size: 12px;
+            margin-top: 15px;
+            text-align: center;
+            color: gray;
+        }
     </style>
 </head>
 <body>
 
-<div class="box">
-    <h2>🚗 Car Lease Tax Calculator</h2>
+<div class="container">
 
-    <label>Car Price (₹)</label>
-    <input type="number" id="carPrice">
+    <div class="logo">
+        <img src="logo.png" alt="Sundaram Finance Logo">
+    </div>
+
+    <h2>Employee Car Lease Tax Calculator</h2>
 
     <label>Monthly Lease Rental (₹)</label>
     <input type="number" id="leaseRental">
@@ -32,6 +91,17 @@ index.html
     <button onclick="calculate()">Calculate Savings</button>
 
     <h3 id="result"></h3>
+
+    <div class="cta">
+        📞 Contact Mathan Muthukumar – 8925967936
+    </div>
+
+    <div class="footer">
+        Deputy Manager – Corporate Car Leasing<br>
+        Sundaram Finance Limited<br>
+        *Calculation is indicative. Final structure subject to employer policy.
+    </div>
+
 </div>
 
 <script>
