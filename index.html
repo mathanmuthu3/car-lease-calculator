@@ -1,0 +1,53 @@
+index.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Car Lease Tax Calculator</title>
+    <style>
+        body { font-family: Arial; padding: 40px; background: #f4f6f8; }
+        .box { background: white; padding: 20px; border-radius: 10px; width: 400px; margin: auto; }
+        input, select, button { width: 100%; padding: 10px; margin: 10px 0; }
+        button { background: #0b5ed7; color: white; border: none; }
+        h2 { text-align: center; }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <h2>🚗 Car Lease Tax Calculator</h2>
+
+    <label>Car Price (₹)</label>
+    <input type="number" id="carPrice">
+
+    <label>Monthly Lease Rental (₹)</label>
+    <input type="number" id="leaseRental">
+
+    <label>Tax Slab</label>
+    <select id="taxRate">
+        <option value="0.05">5%</option>
+        <option value="0.20">20%</option>
+        <option value="0.30">30%</option>
+    </select>
+
+    <button onclick="calculate()">Calculate Savings</button>
+
+    <h3 id="result"></h3>
+</div>
+
+<script>
+function calculate() {
+    let lease = document.getElementById("leaseRental").value;
+    let tax = document.getElementById("taxRate").value;
+
+    let perquisite = 2400; 
+    let taxSaving = (lease - perquisite) * tax;
+    let effectiveEMI = lease - taxSaving;
+
+    document.getElementById("result").innerHTML =
+        "Estimated Monthly Tax Saving: ₹" + Math.round(taxSaving) +
+        "<br>Effective EMI After Tax: ₹" + Math.round(effectiveEMI);
+}
+</script>
+
+</body>
+</html>
